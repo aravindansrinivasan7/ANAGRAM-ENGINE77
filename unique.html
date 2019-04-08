@@ -1,0 +1,25 @@
+<html>
+<head>
+  <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+  </head>
+  <body bgcolor="#E6E6FA">
+    <h1><center>UNIQUE ANAGRAM</center></h1>
+    <table style="width:100%">
+  <tr>
+    <th>LETTERCOUNT</th>
+    <th>LEXOGRAPHICAL WORD</th>
+    <th>WORDS</th>
+    <th>WORDS COUNT</th>
+    <th>USER MAIL ID</th>
+  </tr>
+  {% for y in query %}<tr>
+    <td>{{ y.lettercount }}</td><td>{{ y.lexographical }}</td><td>{% for i in y.strings %}{{ i }},{% endfor %}</td><td>{{ y.wordcount }}</td><td>{{ y.email }}</td>
+      </tr>{% endfor %}
+    </table>
+    <center><h2><b><p><a href='/'>Home</a></p></b></h2></center>
+    </body>
+    </html>

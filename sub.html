@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body bgcolor="#E6E6FA">
+  <form method="get" action="/sub">
+      <h1><center>INSERT A WORD TO FIND OTHER ANAGRAMS</center></h1><br/><center><h2><input style="height:45px;font-size:16pt;" type="text" name="input77" placeholder="Please type here...." pattern="[a-zA-Z]+" required="True"/><br/></center></h1>
+        <center><input type="submit" name="button" value="SEARCH"/></center>
+      </form>
+      <center><h2><u>ANAGRAMS:</u></h2></center>{% for y in my_list.strings %}<center>{{ y }}<br/></center>{% endfor %}
+      <br/><center><h2><u>SUB ANAGRAMS:</u></h2></center>{% for i in de %}{% for j in i.strings %}<center>{{ j }}<br/></center>{% endfor %}{% endfor %}</h2></center>
+
+      <br/>
+<center><h2><b><p><a href='/'>HOME</a></p></b></h2></center>
+
+</body>
+</html>
+
+
+<!--
+
+
+    <h3><center>{% for y in my_list.strings %}{{ y }}<br/>{% endfor %}</center></h3>
+
+-->

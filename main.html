@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>ANAGRAM HOMEPAGE</title>
+<meta charset="utf-8">
+</head>
+<body bgcolor="#E6E6FA">
+{% if user %}
+<center><h1>ANAGRAM ENGINE</h1></center>
+<div id = "menu" align = "middle" >
+        <a href = "/newword">ADD</a> |
+        <a href = "/anagram">ANAGRAM</a> |
+        <a href = "/unique">UNIQUE ANAGRAM</a> |
+        <a href = "/sub">SUB ANAGRAM</a> |
+        <a href = "/wordlist">WORD FILE</a>
+     </div>
+     <b>TOTAL NUMBER OF UNIQUE ANAGRAMS: {{ uq }}</b>
+     </br><b>TOTAL NUMBER OF WORDS: {{ st }}</b>
+{% else %}
+<h1><b><center><p>ANAGRAM ENGINE</p></b></h1></center>
+{% endif %}
+<center><h2><b><p><a href='{{ url }}'>{{ url_string }}</a></p></b></h2></center>
+</body>
+</html>
